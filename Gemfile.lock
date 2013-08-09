@@ -1,3 +1,12 @@
+GIT
+  remote: git://github.com/anjlab/bootstrap-rails.git
+  revision: 62d7fcd09079341007a19e011353685880021a93
+  branch: 3.0.0
+  specs:
+    anjlab-bootstrap-rails (3.0.0.rc1)
+      railties (>= 3.0)
+      sass (>= 3.2)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -27,6 +36,7 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.0)
     atomic (1.1.12)
+    bcrypt-ruby (3.0.1)
     better_errors (0.9.0)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -136,6 +146,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  anjlab-bootstrap-rails!
+  bcrypt-ruby
   better_errors
   binding_of_caller
   coffee-rails (~> 4.0.0)

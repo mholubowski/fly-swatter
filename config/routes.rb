@@ -1,5 +1,6 @@
 FlySwatter::Application.routes.draw do
 
+
   root 'users#new'
   resources :bug_reports, only: [:index, :show, :create]
 
@@ -7,6 +8,11 @@ FlySwatter::Application.routes.draw do
     resource :widget
     resources :bug_reports
   end
+
+  resources :sessions, only: [:new, :create, :destroy]
+  get '/signup',  to: 'users#new'
+  get '/signin',  to: 'sessions#new'
+  delete '/signout', to: 'sessions#destroy'#, via: :delete
 
   get 'users/:id/generate_script' => 'users#generate_script'
 

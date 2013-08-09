@@ -1,3 +1,9 @@
 <div id="nav-wrapper">
   <h1><%= link_to 'FLY SWATTER', root_url %></h1>
+  current user: <%= current_user %>
+
+  <li><%= link_to "#{current_user.email}", root_path if signed_in?%> </li>
+        <li><%= link_to "Sign in", signin_path unless signed_in? %></li>
+        <!-- <li><%#= link_to "Sign up", signup_path unless signed_in? %></li> -->
+        <li><%= link_to "Sign out", signout_path, method: "delete" if signed_in? %> </li>
 </div>

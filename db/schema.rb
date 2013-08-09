@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130809080545) do
+ActiveRecord::Schema.define(version: 20130809225159) do
 
   create_table "bug_reports", force: true do |t|
     t.string   "page_url"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20130809080545) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "unique_key"
+    t.string   "remember_token"
   end
 
   create_table "widgets", force: true do |t|

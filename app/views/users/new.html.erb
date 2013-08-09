@@ -1,2 +1,25 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<%= form_for @user, validate: true do |f| %>
+  <%#= render 'shared/form_error_messages', object: f.object %>
+  
+  <%#= f.label :username %>
+  <div class="input-prepend">
+    <span class="add-on"><i class='icon-folder-open-alt'></i></span>
+    <%= f.text_field :email, placeholder: "Email" %>
+  </div>
+
+<br>
+  <%#= f.label :password %>
+  <div class="input-prepend">
+    <span class="add-on"><i class='icon-lock'></i></span>
+    <%= f.password_field :password, placeholder: "Password" %>
+  </div>
+<br>
+  <%#= f.label :password_confirmation %>
+  <div class="input-prepend">
+    <span class="add-on"><i class='icon-refresh'></i></span>
+    <%= f.password_field :password_confirmation, placeholder: "Confirm Password" %>
+  </div>
+
+  <%= f.submit "Submit", class: "btn btn-large" %>
+
+<% end %>

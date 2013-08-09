@@ -27,9 +27,14 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+gem 'bcrypt-ruby'
 # to allow cross domain ajax requests
 gem 'rack-cors',
   :require => 'rack/cors'
+
+gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+                            :github => 'anjlab/bootstrap-rails',
+                            :branch => '3.0.0'
 
 
 group :doc do
