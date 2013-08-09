@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130809071132) do
+ActiveRecord::Schema.define(version: 20130809080545) do
 
   create_table "bug_reports", force: true do |t|
     t.string   "page_url"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20130809071132) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "browser_info"
+    t.integer  "user_id"
   end
 
   create_table "users", force: true do |t|

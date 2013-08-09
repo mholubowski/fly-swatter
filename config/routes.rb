@@ -1,9 +1,14 @@
 FlySwatter::Application.routes.draw do
 
-  
-  root 'bug_reports#index'
+  root 'users#new'
   resources :bug_reports, only: [:index, :show, :create]
 
+  resources :users do
+    resource :widget
+    resources :bug_reports
+  end
+
+  get 'users/:id/generate_script' => 'users#generate_script'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
