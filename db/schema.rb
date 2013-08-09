@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130809062056) do
+ActiveRecord::Schema.define(version: 20130809071132) do
 
   create_table "bug_reports", force: true do |t|
     t.string   "page_url"
@@ -20,5 +20,21 @@ ActiveRecord::Schema.define(version: 20130809062056) do
     t.datetime "updated_at"
     t.string   "browser_info"
   end
+
+  create_table "users", force: true do |t|
+    t.string   "email"
+    t.string   "password_digest"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "unique_key"
+  end
+
+  create_table "widgets", force: true do |t|
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "widgets", ["user_id"], name: "index_widgets_on_user_id"
 
 end
