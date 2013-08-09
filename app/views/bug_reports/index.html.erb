@@ -1,0 +1,11 @@
+<ul>
+  <% @bug_reports.each do |report| %>
+    <li style="padding:10px; margin:10px; border:1px solid green;">
+      <%= report.created_at %>
+      <br>
+      <%= report.page_url %>
+      <br>
+      <%= report.description %>
+    </li>
+  <% end %>
+</ul>
