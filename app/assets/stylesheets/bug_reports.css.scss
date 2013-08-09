@@ -1,3 +1,14 @@
 // Place all the styles related to the bugReports controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+// ---- INDEX
+.bugs-wrapper {
+  padding: 20px 100px;
+}
+.bug-partial-wrapper {
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 1px 1px 1px 1px #333;
+  background-color: #fff;
+}

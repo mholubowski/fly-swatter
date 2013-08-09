@@ -11,3 +11,8 @@
  *= require_self
  *= require_tree .
  */
+
+body {
+  background-color: #f3f3f3;
+  background-image: url(image-path('bg_pattern.png'));
+}

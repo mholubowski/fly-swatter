@@ -10,7 +10,12 @@ class BugReportsController < ApplicationController
 
   def create    
     # binding.pry
-    redirect_to :back
+    br = BugReport.new do |b|
+      b.description  = params[:description]
+      b.page_url     = params[:page_url]
+      b.browser_info = params[:browser_info]
+    end
+    br.save
   end
 
 end
