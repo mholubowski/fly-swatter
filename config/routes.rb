@@ -1,6 +1,6 @@
 FlySwatter::Application.routes.draw do
 
-  root 'bug_reports#index'
+  root 'users#new'
   resources :bug_reports, only: [:index, :show, :create]
 
   resources :users do
