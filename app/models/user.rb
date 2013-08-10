@@ -26,13 +26,19 @@ class User < ActiveRecord::Base
   end
 
   def generate_script
+    if Rails.env.development?
+      url = 'http://localhost:3001'
+    else
+      url = 'http://fly-swatter.herokuapp.com'
+    end
+
     script = <<-script_heredoc
       <script type="text/javascript">
         var _fly_swatter_id = "#{self.unique_key}";
         (function() {
           var fs = document.createElement('script'); 
           fs.type = 'text/javascript'; fs.async = true;;
-          fs.src = 'http://localhost:3001/fly_swatter.js';
+          fs.src = '#{url}/fly_swatter.js';
           var s = document.getElementsByTagName('script')[0]; 
           s.parentNode.insertBefore(fs, s);
 
@@ -40,7 +46,7 @@ class User < ActiveRecord::Base
           var head  = document.getElementsByTagName('head')[0];
           link.rel  = 'stylesheet';
           link.type = 'text/css';
-          link.href = 'http://localhost:3001/fly_swatter.css';
+          link.href = '#{url}/fly_swatter.css';
           link.media = 'all';
           head.appendChild(link);
         })();

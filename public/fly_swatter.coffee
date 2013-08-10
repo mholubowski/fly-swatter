@@ -69,9 +69,12 @@ class flySwatter
     if (M && (tem= ua.match(/version\/([\.\d]+)/i))!= null) then M[2]= tem[1]
     return M.join(' ')
 
+development = false
+
+url = if development then "http://localhost:3001/users/#{_fly_swatter_id}/widget.json" else "http://fly-swatter.herokuapp.com/users/#{_fly_swatter_id}/widget.json"
 
 $.ajax({
-  url: 'http://localhost:3001/users/' + _fly_swatter_id + '/widget.json',
+  url: url,
   type: 'GET',
   success: (json) -> 
     renderWidget(json)
