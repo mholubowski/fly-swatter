@@ -50,6 +50,10 @@ group :development do
   gem 'sqlite3'
 end
 
+group :production do
+  gem 'pg'
+end
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

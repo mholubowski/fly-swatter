@@ -10,7 +10,7 @@ class flySwatter
     html = """
             <div id="#{@id}">
               <div class="click-tab">
-                <div class="bug-icon"><i class="icon-bug icon-2x"></i></div>
+                <div class="bug-icon"><i class="icon-bug"></i></div>
               </div>
 
               <div class="form-wrapper">
@@ -38,13 +38,15 @@ class flySwatter
     })
 
   thank_you: () ->
-    console.log 'thank you!'
+    $elm = $("##{@id}")
+    $elm.find('.form-wrapper').html('<h1>Thank you</h1>')
+    $elm.find('.click-tab').click()
 
 
   _init_binders: () ->
     $elm = $("##{@id}")
     $elm.on 'click', '.click-tab', ->
-      change = if $(this).hasClass('hidden') then '+=300px' else '-=300px'
+      change = if $(this).hasClass('hidden') then '+=335px' else '-=335px'
       $elm.animate({left: change})
       $(this).toggleClass('hidden')
     $elm.on 'click', '.fs-submit-button', @submit_bug_report

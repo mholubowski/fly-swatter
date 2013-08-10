@@ -14,7 +14,7 @@ FlySwatter::Application.routes.draw do
   get '/signin',  to: 'sessions#new'
   delete '/signout', to: 'sessions#destroy'#, via: :delete
 
-  get 'users/:id/generate_script' => 'users#generate_script'
+  get 'users/:id/generate_script' => 'users#generate_script', as: 'get_script'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -14,7 +14,7 @@
 
     flySwatter.prototype.render = function() {
       var html;
-      html = "<div id=\"" + this.id + "\">\n  <div class=\"click-tab\">\n    <div class=\"bug-icon\"><i class=\"icon-bug icon-2x\"></i></div>\n  </div>\n\n  <div class=\"form-wrapper\">\n    <form>\n      Bug: <textarea type=\"input\" name=\"bug\"></textarea>\n    </form>\n\n    <div class=\"fs-button-wrapper\">\n      <div class=\"fs-submit-button\">Submit Bug</div>\n    </div>\n  </div>\n</div>";
+      html = "<div id=\"" + this.id + "\">\n  <div class=\"click-tab\">\n    <div class=\"bug-icon\"><i class=\"icon-bug\"></i></div>\n  </div>\n\n  <div class=\"form-wrapper\">\n    <form>\n      Bug: <textarea type=\"input\" name=\"bug\"></textarea>\n    </form>\n\n    <div class=\"fs-button-wrapper\">\n      <div class=\"fs-submit-button\">Submit Bug</div>\n    </div>\n  </div>\n</div>";
       return $('body').append(html);
     };
 
@@ -31,7 +31,10 @@
     };
 
     flySwatter.prototype.thank_you = function() {
-      return console.log('thank you!');
+      var $elm;
+      $elm = $("#" + this.id);
+      $elm.find('.form-wrapper').html('<h1>Thank you</h1>');
+      return $elm.find('.click-tab').click();
     };
 
     flySwatter.prototype._init_binders = function() {
@@ -39,7 +42,7 @@
       $elm = $("#" + this.id);
       $elm.on('click', '.click-tab', function() {
         var change;
-        change = $(this).hasClass('hidden') ? '+=300px' : '-=300px';
+        change = $(this).hasClass('hidden') ? '+=335px' : '-=335px';
         $elm.animate({
           left: change
         });

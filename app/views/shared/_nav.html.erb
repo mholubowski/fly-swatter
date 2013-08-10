@@ -7,7 +7,7 @@
     <%= link_to "Sign up", signup_path unless signed_in? %>
   <% end %>
   <% if signed_in? %>
-    Hey <%= current_user.email %> - 
-    <%= link_to "Sign out like a bitch", signout_path, method: "delete" %> 
+    Hey <%= link_to current_user.email, user_path(current_user) %> - 
+    <%= link_to "Sign out like a b*tch", signout_path, method: "delete" %> 
   <% end %>
 </div>

@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    @user = User.find(params[:id])
   end
 
   def new
@@ -14,7 +15,7 @@ class UsersController < ApplicationController
     if @user.save
       # flash[:success] = "Successful user signup!"
       sign_in(@user)
-      # redirect_to subscriptions_new_path
+      redirect_to user_path(@user)
     else
       flash[:error] = "Please try again"
       render 'new'
