@@ -1,0 +1,19 @@
+// Place all the styles related to the welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// -----index-----
+.hero-wrapper {
+  padding: 60px 20px;
+  img {
+    float: left;
+    display: inline;
+  }
+  .slogan {
+    float: right;
+    margin-top: 70px;
+    display: inline;
+    width: 400px;
+    font-size: 22px;
+  }
+}

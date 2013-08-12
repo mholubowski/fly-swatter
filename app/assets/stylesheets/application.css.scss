@@ -9,15 +9,18 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require twitter/bootstrap
- *= require_tree .
+ *= require fly_swatter
  */
-
-@import "twitter/bootstrap";
 
 body {
   padding: 0;
   margin: 0;
   background-color: #f3f3f3;
   background-image: url(image-path('bg_pattern.png'));
+}
+
+.content {
+  max-width: 800px;
+  min-width: 800px;
+  margin: 0 auto;
 }

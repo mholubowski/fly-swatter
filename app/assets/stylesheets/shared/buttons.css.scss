@@ -1,0 +1,26 @@
+a.btn {
+  text-decoration: none;
+}
+
+input[type="submit"] {
+  border: none;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  padding: 7px 12px;
+  color: #fdfdfd;
+  text-shadow: 1px 1px 1px #777;
+  font-size: 16px;
+  background-color: $main-color;
+  border-radius: 2px;
+  @include clickable;
+  &:hover {
+    background-color: lighten($main-color, 3%);
+  }
+  &:active {
+    background-color: darken($main-color, 3%);
+  }
+}
+

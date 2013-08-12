@@ -1,0 +1,27 @@
+#nav-wrapper {
+  width: 100%;
+  padding: 5px;
+  background-color: $main-color;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  box-shadow: 0px 0px 20px -5px #407C67;
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+}
+
+.home-link {
+  display: inline-block;
+}
+
+.sign-in-out-wrapper {
+  float: right;
+  margin-top: 13px;
+}
+
+.nav-inner {
+  max-width: 800px;
+  min-width: 500px;
+  margin: 0 auto;
+}

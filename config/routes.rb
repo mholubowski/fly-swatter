@@ -1,7 +1,10 @@
 FlySwatter::Application.routes.draw do
 
+  root 'welcome#index'
 
-  root 'users#new'
+  get "welcome/index"
+  get "welcome/about"
+  
   resources :bug_reports, only: [:index, :show, :create]
 
   resources :users do

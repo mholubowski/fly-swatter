@@ -7,9 +7,12 @@ class User < ActiveRecord::Base
   before_create :set_unique_key
   before_save :create_remember_token
 
-   validates :email, format: {
+   validates :email,
+        uniqueness: true,
+        presence: true,
+        format: {
         with: /\b[A-Z0-9._%a-z\-]+@(?:[A-Z0-9a-z\-]+\.)+[A-Za-z]{2,4}\z/,
-        message: "Please enter a valid Email" }
+        message: "is not valid" }
 
   validates :password,
   presence: true,

@@ -1,22 +1,16 @@
-<hr class="skinny">
-<div class="row">
-  <div class="span4 offset4">
-    <div id="sign-in-form"><%= form_for(:session, url: sessions_path) do |f| %>
-    <h1>Login</h1>
-      
-      <div class="input-prepend">
-        <span class="add-on"><i class='icon-folder-open-alt'></i></span>
-        <%= f.text_field :email, placeholder: "Account Name" %>
-      </div>
-      
-      <div class="input-prepend">
-        <span class="add-on"><i class='icon-lock'></i></span>
-        <%= f.password_field :password, placeholder: "Password" %>
-      </div>
-      <br><br>
-      
-      <%= f.submit "Sign in", class: "btn" %>
-      
-      <% end %></div>
-    </div>
+<div id="sign-in-form"><%= form_for(:session, url: sessions_path) do |f| %>
+  <h1>Login</h1>
+  
+  <div class="input-prepend">
+    <span class="add-on"><i class='icon-folder-open-alt'></i></span>
+    <%= f.text_field :email, placeholder: "Account Name" %>
   </div>
+  
+  <div class="input-prepend">
+    <span class="add-on"><i class='icon-lock'></i></span>
+    <%= f.password_field :password, placeholder: "Password" %>
+  </div>
+  
+  <%= f.submit "Sign in", class: "btn" %>
+  
+  <% end %></div>

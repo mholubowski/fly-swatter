@@ -78,7 +78,7 @@
 
   })();
 
-  development = false;
+  development = true;
 
   url = development ? "http://localhost:3001/users/" + _fly_swatter_id + "/widget.json" : "http://fly-swatter.herokuapp.com/users/" + _fly_swatter_id + "/widget.json";
 

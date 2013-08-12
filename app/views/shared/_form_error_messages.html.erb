@@ -1,0 +1,10 @@
+<% if object.errors.any? %>
+<div class="form-errors-wrapper">
+  <div class='error-header'>Oops!</div>
+  <ul>
+    <% object.errors.full_messages.each do |error| %>
+    <li><%= error %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
