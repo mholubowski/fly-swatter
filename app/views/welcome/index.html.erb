@@ -5,7 +5,25 @@
     <%= link_to '30 Second Set Up', new_user_path, class: 'btn' %>
 
   </div>
-  <%= image_tag 'fly_swatter.png', height: '300px' %>
+  <%= image_tag 'fly_swatter_with_label2.png', height: '300px' %>
 </div>
 
+<div class="learn-more">
+  Look down there!
+  <%= image_tag 'down_arrow.png' %>
+</div>
 
+<div class="toggle-wrapper" data-active="0">
+  <div class="radio-container">
+    <% steps = ['Step one', 'Step two', 'Step three', 'Step four'] %>
+    <% steps.each_with_index do |step, i| %>
+      <div class="btn btn-white" data-toggle="<%= i %>"><%= step %></div>
+    <% end %>
+  </div>
+  <div class="content-container">
+      <div class="content" data-toggle_label="0">STEP 1</div>
+      <div class="content" data-toggle_label="1">STEP 2</div>
+      <div class="content" data-toggle_label="2">STEP 3</div>
+      <div class="content" data-toggle_label="3">STEP 4</div>
+  </div>
+</div>

@@ -6,14 +6,34 @@
 .hero-wrapper {
   padding: 60px 20px;
   img {
-    float: left;
-    display: inline;
+    display: inline-block;
   }
   .slogan {
     float: right;
     margin-top: 70px;
-    display: inline;
+    display: inline-block;
     width: 400px;
     font-size: 22px;
+  }
+}
+
+.learn-more {
+  width: 150px;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 18px;
+}
+
+// toggle modal
+
+.toggle-wrapper {
+  padding: 60px 20px;
+  .radio-container {
+    text-align: center;
+  }
+  .content-container {
+    .content {
+      display: none;
+    }
   }
 }

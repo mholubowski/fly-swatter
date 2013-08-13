@@ -16,6 +16,7 @@ input[type="submit"] {
   background-color: $main-color;
   border-radius: 2px;
   @include clickable;
+  border: 1px solid lighten($main-color, 1%);
   &:hover {
     background-color: lighten($main-color, 3%);
   }
@@ -24,3 +25,17 @@ input[type="submit"] {
   }
 }
 
+.btn-white {
+  $white: #f7f7f7;
+  @extend .btn;
+  background-color: $white;
+  color: #323232;
+  text-shadow: none;
+  border: 1px solid lighten($white, 1%);
+  &:hover {
+    background-color: lighten($white, 3%);
+  }
+  &:active {
+    background-color: darken($white, 3%);
+  }
+}
