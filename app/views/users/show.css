@@ -1,3 +1,47 @@
-.tester {
-  color: red;
+#fly-swatter-widget-wrapper {
+  position: absolute;
+  top: 80px;
+  left: -2px; 
+}
+#fly-swatter-widget-wrapper.hidden {
+  left: -298px; 
+}
+#fly-swatter-widget-wrapper .form-wrapper {
+  padding: 20px;
+  width: 300px;
+  height: 250px;
+  display: inline-block;
+  box-shadow: 1px 1px 5px -1px #777;
+  background-color: #f3f3f3;
+  background-image: url(image-path("bg_pattern.png")); 
+}
+#fly-swatter-widget-wrapper .fs-button-wrapper {
+  text-align: center; 
+}
+#fly-swatter-widget-wrapper .fs-button-wrapper .fs-submit-button {
+  padding: 10px;
+  background: #cf0404;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #df0404), color-stop(100%, #ff3019));
+  border-radius: 5px;
+  display: inline-block; 
+}
+#fly-swatter-widget-wrapper .fs-button-wrapper .fs-submit-button:hover {
+  cursor: hand;
+  cursor: pointer; 
+}
+#fly-swatter-widget-wrapper .click-tab {
+  padding: 17px 7px;
+  background: #cf0404;
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #cf0404), color-stop(100%, #ff3019));
+  border-radius: 0 5px 5px 0;
+  display: inline-block;
+  float: right;
+  box-shadow: 1px 1px 5px -1px #777; 
+}
+#fly-swatter-widget-wrapper .click-tab:hover {
+  cursor: hand;
+  cursor: pointer; 
+}
+#fly-swatter-widget-wrapper .bug-icon {
+  text-align: center; 
 }

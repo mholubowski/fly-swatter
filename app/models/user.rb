@@ -40,8 +40,8 @@ class User < ActiveRecord::Base
         var _fly_swatter_id = "#{self.unique_key}";
         (function() {
           var fs = document.createElement('script'); 
-          fs.type = 'text/javascript'; fs.async = true;;
-          fs.src = '#{url}/fly_swatter.js';
+          fs.type = 'text/javascript'; fs.async = true;
+          fs.src = '#{url}/users/#{self.id}.js';
           var s = document.getElementsByTagName('script')[0]; 
           s.parentNode.insertBefore(fs, s);
 
@@ -49,7 +49,7 @@ class User < ActiveRecord::Base
           var head  = document.getElementsByTagName('head')[0];
           link.rel  = 'stylesheet';
           link.type = 'text/css';
-          link.href = '#{url}/fly_swatter.css';
+          link.href = '#{url}/users/#{self.id}.css';
           link.media = 'all';
           head.appendChild(link);
         })();
